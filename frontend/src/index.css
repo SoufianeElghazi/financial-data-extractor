@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables */
+html {
+  --section-background-color: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 16, 0.582),
+    rgba(12, 8, 24, 0.904)
+  );
+  --image-gradient: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 16, 0.678),
+    rgba(12, 10, 22, 0.863)
+  );
+
+  --imp-text-color: #2dd4bf;
+  /* #4d7c0f */
+}
+
+.other_color{
+color :#fdba74
+}
+.purple {
+  color: var(--imp-text-color) !important;
+}
+
+button:focus {
+  box-shadow: none !important;
+}
+
+/* ------------*/
+/*     Body   */
+/*-----------*/
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: #1a2e05; */
+  background-image: linear-gradient(to left, #000000, #000f04);
+}
+
+
+/* ------------*/
+/* Pre-Loader */
+/*-----------*/
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: #052e16;
+    background-image: url(./assets/preloader.svg);
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  #preloader-none {
+    opacity: 0;
+  }
+  
+  #no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+
+/*-------*/
+/* HOME */
+/*-----*/
+.home-section {
+  position: relative;
+  z-index: -1;
+  background-image: var(--image-gradient), url(./assets/background.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 30px !important;
+  padding-top: 30px !important;
+}
+
+/*-------*/
+/* about */
+/*-----*/
+.about-section {
+  position: relative;
+  z-index: -1;
+  background-image: var(--image-gradient), url(./assets/background_about.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 30px !important;
+  padding-top: 30px !important;
+}
+
+/* --------- */
+/*Scrollbar   */
+/* --------- */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #052e16;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:     #042f2e ;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2dd4bf;
+  border-radius: 12px;
+}
+
+
+/* --------- */
+/* Section Devider    */
+/* --------- */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, #052e16, #2dd4bf, #052e16);
+  margin: 40px 0;
+}
+
+.smallsection-divider {
+  border: 0;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(to right, #052e16, #2dd4bf, #052e16);
+
+}
+
+/* --------- */
+/* Drag & Drop */
+/* --------- */
+
+.modal {
+  width: 90%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+.logo-circle {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #e9e5ff;
+  fill: #2dd4bf;
+}
+
+.btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  background-color: #e9e5ff;
+}
+
+.modal-body {
+  padding: 1rem 1.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+  color: white;
+}
+
+.modal-description {
+  color: #2dd4bf;
+}
+
+.upload-area {
+  margin-top: 1.25rem;
+  background-color: transparent;
+  padding: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px dashed #2dd4bf;
+}
+
+.upload-area:hover,
+.upload-area:focus {
+  cursor: pointer;
+  border: 1px solid #2dd4bf;
+}
+
+.upload-area:hover .upload-area-icon,
+.upload-area:focus .upload-area-icon {
+  transform: scale(1.3);
+  transition-duration: 0.3s;
+}
+
+.upload-area-icon {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  fill: white;
+}
+
+.upload-area-title {
+  margin-top: 1rem;
+  display: block;
+  font-weight: 700;
+  color: #d9f99d;
+}
+
+.upload-area-description {
+  display: block;
+  color: #2dd4bf;
+}
+
+.upload-area-description strong {
+  color: white;
+  font-weight: 700;
+}
+
+.modal-footer {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-footer [class*="btn-"] {
+  margin-left: 0.75rem;
+}
+
+.btn-secondary,
+.btn-primary {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border: 2px solid #e5e5e5;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: white;
+  border-color: white;
+  cursor: pointer;
+}
